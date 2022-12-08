@@ -1,0 +1,38 @@
+CREATE TABLE CraftStore (
+    id INTEGER PRIMARY KEY,
+    crafttype TEXT,
+    price INTEGER,
+    instock REAL,
+    aisle NUMERIC);
+
+INSERT INTO CraftStore VALUES (1, "craft vinyl", 10.99, 4,8);
+INSErT INTO Craftstore values (2, "sublimation mug", 6.78, 23,9);
+Insert into Craftstore values (3, "Scrapbook paper", 3.99, 78,8);
+INSERT into Craftstore VALUES (4, "Christmas Decorations", 7.99, 8,10);
+Insert into Craftstore VALUES (5, "Wall Art", 12.34, 7,1);
+Insert into Craftstore VALues (6, "Child's Art Set",13.76, 10,9);
+Insert into Craftstore VALUES (7, "Felt Sheet",0.33, 100,7);
+Insert into Craftstore Values (8, "Paint", 6.87, 45,3);
+Insert into Craftstore Values (9,"Sewing Machine", 387.90, 2,6);
+Insert into Craftstore Values (10, "thread", 1.67, 189,6);
+Insert into Craftstore Values (11, "needles",5.43,16,6);
+insert into craftstore values (12, "Fabric", 6.87, 28,5);
+Insert into craftstore values (13, "Cricut", 399.99, 3,8);
+Insert into craftstore values (14, "Blades", 11.99, 7, 8);
+Insert into craftstore values (15, "heat press", 654.00,1,8);
+
+
+
+show the price in order from min-max
+--------------------------------------
+SELECT * FROM CraftStore order by price;
+
+Show the aisles 
+---------------------------------------
+Select aisle from craftstore;
+show how many of each item instock 
+---------------------------------------
+select instock from craftstore
+
+
+
