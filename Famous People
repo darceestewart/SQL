@@ -1,0 +1,36 @@
+CREATE TABLE MovieStar (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    fullname TEXT,
+    movies INTEGER);
+    
+    
+INSERT INTO MovieStar (fullname, movies) VALUES ("Dax Shepherd", "CHIPS");
+
+INSERT INTO MovieStar (fullname, movies) VALUES ("Kristen Bell", "CHIPS");
+
+INSERT INTO MovieStar (fullname, movies) VALUES ("Meg Ryan", "Flesh and Bone");
+
+INSERT INTO MovieStar (fullname, movies) VALUES ("Dennis Quaid", "Flesh and Bone");
+INSERT INTO MovieStar (fullname, movies) VALUES ("Reese Witherspoon", "Cruel Intentions");
+INSERT INTO MovieStar (fullname, movies) VALUES ("Ben Stiller", "Zoolander");
+INSERT INTO MovieStar (fullname, movies) VALUES ("Will Smith", "Ali");
+INSERT INTO MovieStar (fullname, movies) VALUES ("Melissa McCarthy", "Bridesmaids");
+INSERT INTO MovieStar (fullname, movies) VALUES ("Penelope Cruz", "Loving Pablo");
+INSERT INTO MovieStar (fullname, movies) VALUES ("Madonna", "Shanghai Surprise");
+CREATE TABLE Married (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    person1_id INTEGER,
+    person2_id INTEGER);
+    
+INSERT INTO Married ( person1_id,person2_id ) VALUES (1,2);
+
+
+SELECT a.fullname, b.fullname FROM Married
+   JOIN MovieStar a
+   ON Married.person1_id=a.id
+   JOIN MovieStar b
+   ON Married.person2_id=b.id
+
+
+
+    
